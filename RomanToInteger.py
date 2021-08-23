@@ -15,4 +15,4 @@ class Solution:
                 answer += dic[s[i]]
         answer += dic[s[-1]]
 
-        return answer 
+        return answer

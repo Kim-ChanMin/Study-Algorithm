@@ -1,0 +1,25 @@
+'''
+LeetCode 344. Reverse String
+Language : Python
+'''
+
+# 1. Use Two Pointer
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        left, right = 0, len(s) - 1
+
+        while left < right:
+            s[left], s[right] = s[right], s[left]
+            left, right = left + 1, right - 1
+
+#2. Swap
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        for i in range(len(s)//2):
+            s[i], s[-i-1] = s[-i-1], s[i]
